@@ -12,19 +12,19 @@ A server-side component is required to generate auth tokens for services that us
 
 ## Requirements
 
-*node.js > 4
+node.js > 4
 
 ## Getting started
 
 In most cases, you can open folder with package.json and hit npm install>npm start:
 
 
-*To build project app do the following:
+To build project app do the following:
 
 ```
 npm init
 ```
-*Now that you have generated package.json located in project folder, install needed modules:
+Now that you have generated package.json located in project folder, install needed modules:
 
 ```
 npm install
@@ -62,11 +62,11 @@ npm install body-parser
 
 ```npm start
 ```
-*Server is running on port 3000.
-*You should see message in node console.
-*Go to 'http://localhost:3000/'
-*Wait for script to finish loading data.
-*Check the generated text file in project folder ('log.txt'), open it with text editor(no notepad).
+>Server is running on port 3000.
+>You should see message in node console.
+>Go to 'http://localhost:3000/'
+>Wait for script to finish loading data.
+>Check the generated text file in project folder ('log.txt'), open it with text editor(no notepad).
 
 
 
