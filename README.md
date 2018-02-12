@@ -62,11 +62,10 @@ npm install body-parser
 
 ```npm start
 ```
->Server is running on port 3000.
->You should see message in node console.
->Go to 'http://localhost:3000/'
->Wait for script to finish loading data.
->Check the generated text file in project folder ('log.txt'), open it with text editor(no notepad).
+##Server is running on port 3000.
+##Go to 'http://localhost:3000/'
+##Wait for script to finish loading data.
+##Check the generated text file in project folder ('log.txt'), open it with text editor(no notepad).
 
 
 
