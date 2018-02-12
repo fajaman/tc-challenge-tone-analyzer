@@ -19,7 +19,7 @@ node.js > 4
 In most cases, you can open folder with package.json and hit npm install>npm start:
 
 
-To build project app do the following:
+To build project app do the following actions inside project folder:
 
 ```
 npm init
@@ -58,14 +58,15 @@ npm install dotenv
 npm install body-parser
 ```
 
-*After that app should be ready for deploy. Run:
+*After that app should be ready for deploy. Run it with:
 
-```npm start
 ```
-##Server is running on port 3000.
-##Go to 'http://localhost:3000/'
-##Wait for script to finish loading data.
-##Check the generated text file in project folder ('log.txt'), open it with text editor(no notepad).
+npm start
+```
+Server is running on port 3000.
+Go to 'http://localhost:3000/'
+Wait for script to finish loading data.
+Check the generated text file in project folder ('log.txt'), open it with text editor(no notepad).
 
 
 
