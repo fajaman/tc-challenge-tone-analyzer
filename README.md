@@ -64,9 +64,9 @@ After that app should be ready for deploy. Run it with:
 npm start
 ```
 ## Server is now running on port 3000.
->>Go to 'http://localhost:3000/'
+Go to 'http://localhost:3000/'
 Wait for the script to finish loading data.
-## Check the generated text file in project folder ('log.txt'), open it with text editor(no notepad).
+>>Check the generated text file in project folder ('log.txt'), open it with text editor(no notepad).
 
 
 
