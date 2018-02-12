@@ -21,26 +21,43 @@ In most cases, you can open folder with package.json and hit npm install>npm sta
 
 *To build project app do the following:
 
-```npm init
+```
+npm init
 ```
 *Now that you have generated package.json located in project folder, install needed modules:
 
-```npm install
 ```
-```npm install webpack
+npm install
 ```
-```npm install webpack-dev-middleware
+
 ```
-```npm install shebang-loader
+npm install webpack
 ```
-```npm install fetch
+
 ```
-```npm install express
+npm install webpack-dev-middleware
 ```
-```npm install dotenv
+
 ```
-```npm install body-parser
+npm install shebang-loader
 ```
+
+```
+npm install fetch
+```
+
+```
+npm install express
+```
+
+```
+npm install dotenv
+```
+
+```
+npm install body-parser
+```
+
 *After that app should be ready for deploy. Run:
 
 ```npm start
