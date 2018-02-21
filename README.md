@@ -69,10 +69,11 @@ Go to 'http://localhost:3000/'
 ## Conversation instruction
 
 To start chat sequence, type "start".
-' . '  dot/full stop is identifier for the next question. Use it only when you are done writing answer. 
-If you want to state more sentences in your answer, or separate your answer, just hit enter and continue writing answer. 
 Question won't change unless there is a dot in your answer.
-Follow instruction.
+
+## Important
+Dot/full-stop/' . ' is identifier for the next question. Use it only when you are done writing answer. 
+If you want to state more sentences in your answer, or separate your answer, just hit enter and continue writing answer. 
 
 ## IBM Cloud Deployement
 The app is ready to be deployed on IBM Cloud.
