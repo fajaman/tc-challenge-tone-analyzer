@@ -1,85 +1,85 @@
-# Watson Developer Cloud Webpack Example
+# Watson Cupido Chat-Bot
 
-## Verification video: 
-Brief setup and demonstration video: [YouTube](https://youtu.be/Mi7yplm_OhI)
+## View deployed on IBM Cloud: 
+[Watson Cupido Chat-Bot on IBM Cloud](http://watson-cupido-chat-bot-unclustering-feverishness.eu-gb.mybluemix.net/)
 
-This example app shows a basic client and server setup to use the Watson JS SDK in a client-side context.
+## Forked from:
+[](https://github.com/IBM/watson-conversation-slots-intro)
 
-The example here uses [express](http://expressjs.com/) to serve the content and [webpack](https://www.npmjs.com/package/webpack-dev-middleware) and
-[webpack-dev-middleware](https://www.npmjs.com/package/webpack-dev-middleware) to generate the client-side bundle.
+This app uses Watson Conversation Service to get enough input from the user, then analyzing input data through Personality Insights and ToneAnalyzer Services. 
+Server will compare analyzed results with previous entries stored on dedicated IBM ClearDB database and return similar entries to user. 
+User will toggle results by clicking on plain "Match!" button.
+After comparing and collecting similar data, server will write new entry to database.
+It is based on official IBM conversation-slots-intro interface and server setup but with heavily modified code adapted for this challenge.
 
-## Important notes
+## Requirements
 
-A server-side component is required to generate auth tokens for services that use a username/password combo.
-(This is all services except Alchemy and Visual Recognition which use API keys instead.)
+node >= 6.9.x
+npm  >= 3.10.x
 
-Not all Watson services currently support [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS),
-and in some cases, certain methods work while others do not. Below is a partial list of service support:
-
-The following services support CORS
-
- * Tradeoff Analytics
- * Tone Analyzer
- * Speech to Text*
- * Text to Speech*
- * Personality Insights
- * Document Conversion
- * All Alchemy services
-
-\* Speech to Text and Text to Speech should be usable via the Node.js SDK, but we also have a [Speech JavaScript SDK](https://www.npmjs.com/package/watson-speech) that was specifically written for browser support.
+## Getting started locally
 
 
-The following services do not support CORS
+To build project app do the following actions inside project folder:
 
- * Language Translator
- * Visual Recognition (partial support)
- * Retrieve and Rank
+```
+npm init
+```
+Now that you have generated package.json located in project folder, install needed modules:
 
-
-## Webpack configuration
-
-In most cases, you will want the following in your configuration:
-
-
-```js
-  node: {
-    // see http://webpack.github.io/docs/configuration.html#node
-    // and https://webpack.js.org/configuration/node/
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty'
-  },
+```
+npm install
 ```
 
-Several services use the `fs` library, which won't work in browser environments, and the `request` library loads `fs`,
-`net`, and `tls`, but shouldn't need any of them for basic usage because webpack automatically includes
-[equivalent libraries](https://www.npmjs.com/package/node-libs-browser)
-
-Ideally, only the specific services used shoud be included, for example:
-
-```js
-var ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
-var ConversationV1 = require('watson-developer-cloud/conversation/v1');
+```
+npm install watson-developer-cloud
 ```
 
-**Not Recommended**: It's possible to load the entire library, but it is not recommended due to the added file size:
-
-```js
-var watson = require('watson-developer-cloud');
 ```
-or
-```
-const { ConversationV1, ToneAnalyzerV3 } = require('watson-developer-cloud');
+npm install vcap_services
 ```
 
-Additionally, when importing the entire library, the `shebang-loader` package is need and must be configured
-in webpack.config.js:
-
-```js
-  module: {
-    rules: [{
-        test: /JSONStream/,
-        use: 'shebang-loader'
-    }]
-  }
 ```
+npm install metrics-tracker-client
+```
+
+
+```
+npm install express
+```
+
+```
+npm install dotenv
+```
+
+```
+npm install body-parser
+```
+
+After that app should be ready for start. Run it with:
+
+```
+npm start
+```
+## Server is running on port 3000.
+Go to 'http://localhost:3000/'
+
+## Conversation instruction
+
+To start chat sequence, type "start".
+** Important:  ' . '  dot/full stop is identifier for the next question. Use it only when you are done writing answer.
+If you want to state more sentences in your answer, or separate your answer, just hit enter and continue writing answer. Question won't change unless there is a dot in your answer.**
+Follow instruction.
+
+## IBM Cloud Deployement
+The app is ready to be deployed on IBM Cloud.
+Simply navigate to project directory from CLI and do the:
+```
+cf login
+```
+```
+cf push
+```
+
+
+
