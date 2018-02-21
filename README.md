@@ -6,6 +6,9 @@
 ## Forked from:
 [IBM Watson Conversation Slots github repo](https://github.com/IBM/watson-conversation-slots-intro)
 
+## Verification video
+[Youtube verifiction video](https://youtu.be/g9qKx04H0zg)
+
 ## Introduction
 
 This app uses Watson Conversation Service to get enough input from the user, then analyzing input data through Personality Insights and ToneAnalyzer Services. 
@@ -31,6 +34,10 @@ Now that you have generated package.json located in project folder, install need
 
 ```
 npm install
+```
+
+```
+npm install mysql
 ```
 
 ```
@@ -68,12 +75,14 @@ Go to 'http://localhost:3000/'
 
 ## Conversation instruction
 
+App will prompt 25 questions. It needs a minimum of 100 words for the Personality Insights Service. 
+To achieve this answers should contain 4 words in average, as this is limited free tier of the service max. amount of questions is limited. 
 To start chat sequence, type "start".
 Question won't change unless there is a dot in your answer.
 
 ## Important
-Dot/full-stop/' . ' is identifier for the next question. Use it only when you are done writing answer. 
-If you want to state more sentences in your answer, or separate your answer, just hit enter and continue writing answer. 
+Dot/full-stop/' . ' is identifier for the next question. Use it only when you are done writing the answer. 
+If you want to state more sentences in your answer, or separate your answer, just hit enter and continue writing the answer. 
 
 ## IBM Cloud Deployement
 The app is ready to be deployed on IBM Cloud.
