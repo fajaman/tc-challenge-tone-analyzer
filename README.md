@@ -4,7 +4,9 @@
 [Watson Cupido Chat-Bot on IBM Cloud](http://watson-cupido-chat-bot-unclustering-feverishness.eu-gb.mybluemix.net/)
 
 ## Forked from:
-[](https://github.com/IBM/watson-conversation-slots-intro)
+[IBM Watson Conversation Slots github repo](https://github.com/IBM/watson-conversation-slots-intro)
+
+## Introduction
 
 This app uses Watson Conversation Service to get enough input from the user, then analyzing input data through Personality Insights and ToneAnalyzer Services. 
 Server will compare analyzed results with previous entries stored on dedicated IBM ClearDB database and return similar entries to user. 
